@@ -57,7 +57,7 @@ namespace csharp_library_management_system.THE_DATABASE
         }
 
         // create a function to set data and execute a query
-        public void setData(string query, MySqlParameter[] parameters)
+        public int setData(string query, MySqlParameter[] parameters)
         {
             MySqlCommand command = new MySqlCommand(query, getConnection());
             if (parameters != null)
@@ -65,9 +65,12 @@ namespace csharp_library_management_system.THE_DATABASE
                 command.Parameters.AddRange(parameters);
             }
             openConnection();
-            command.ExecuteNonQuery();
+            int commandState = command.ExecuteNonQuery();
             closeConnection();
+
+            return commandState;
         }
+
      }
 
 }
