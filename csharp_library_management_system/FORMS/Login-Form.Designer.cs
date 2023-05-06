@@ -62,7 +62,7 @@
             this.pictureBox_Pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pictureBox_Pass.Location = new System.Drawing.Point(76, 267);
             this.pictureBox_Pass.Name = "pictureBox_Pass";
-            this.pictureBox_Pass.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox_Pass.Size = new System.Drawing.Size(42, 42);
             this.pictureBox_Pass.TabIndex = 7;
             this.pictureBox_Pass.TabStop = false;
             // 
@@ -70,11 +70,11 @@
             // 
             this.button_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(103)))), ((int)(((byte)(46)))));
             this.button_login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_login.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_login.ForeColor = System.Drawing.Color.White;
             this.button_login.Location = new System.Drawing.Point(76, 343);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(409, 67);
+            this.button_login.Size = new System.Drawing.Size(401, 65);
             this.button_login.TabIndex = 6;
             this.button_login.Text = "Login";
             this.button_login.UseVisualStyleBackColor = false;
@@ -82,19 +82,21 @@
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(132, 267);
-            this.textBox_password.Multiline = true;
+            this.textBox_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_password.Location = new System.Drawing.Point(124, 268);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(353, 50);
+            this.textBox_password.PasswordChar = '*';
+            this.textBox_password.Size = new System.Drawing.Size(353, 41);
             this.textBox_password.TabIndex = 5;
+            this.textBox_password.UseSystemPasswordChar = true;
             this.textBox_password.Click += new System.EventHandler(this.textBox_password_Click);
             // 
             // textBox_username
             // 
-            this.textBox_username.Location = new System.Drawing.Point(132, 188);
-            this.textBox_username.Multiline = true;
+            this.textBox_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_username.Location = new System.Drawing.Point(124, 188);
             this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(353, 50);
+            this.textBox_username.Size = new System.Drawing.Size(353, 41);
             this.textBox_username.TabIndex = 3;
             this.textBox_username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -103,7 +105,7 @@
             this.pictureBox_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pictureBox_User.Location = new System.Drawing.Point(76, 188);
             this.pictureBox_User.Name = "pictureBox_User";
-            this.pictureBox_User.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox_User.Size = new System.Drawing.Size(42, 42);
             this.pictureBox_User.TabIndex = 2;
             this.pictureBox_User.TabStop = false;
             this.pictureBox_User.Click += new System.EventHandler(this.pictureBox_User_Click);
@@ -127,8 +129,8 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-3, 10);
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(533, 136);
             this.label1.TabIndex = 0;
@@ -163,7 +165,7 @@
         private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.TextBox textBox_username;
-        private System.Windows.Forms.PictureBox pictureBox_User;
         private System.Windows.Forms.PictureBox pictureBox_Pass;
+        private System.Windows.Forms.PictureBox pictureBox_User;
     }
 }

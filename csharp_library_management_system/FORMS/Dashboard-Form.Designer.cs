@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox_Logo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -60,6 +59,7 @@
             this.button_genres = new System.Windows.Forms.Button();
             this.button_circulation = new System.Windows.Forms.Button();
             this.button_users = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
@@ -93,7 +93,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.pictureBox_Logo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -101,19 +101,6 @@
             this.panel2.Size = new System.Drawing.Size(209, 127);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gold;
-            this.textBox2.Location = new System.Drawing.Point(90, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 54);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "LMS";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox_Logo
             // 
@@ -377,7 +364,7 @@
             this.button_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_close.FlatAppearance.BorderSize = 0;
             this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_close.Location = new System.Drawing.Point(826, 3);
+            this.button_close.Location = new System.Drawing.Point(827, 3);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(33, 33);
             this.button_close.TabIndex = 0;
@@ -433,6 +420,7 @@
             this.button_genres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_genres.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_genres.UseVisualStyleBackColor = true;
+            this.button_genres.Click += new System.EventHandler(this.button_genres_Click);
             // 
             // button_circulation
             // 
@@ -465,6 +453,18 @@
             this.button_users.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_users.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_users.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Gold;
+            this.label13.Location = new System.Drawing.Point(73, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(133, 57);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "LMS";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // Dashboard_Form
             // 
@@ -530,11 +530,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button_books;
         private System.Windows.Forms.Button button_users;
         private System.Windows.Forms.Button button_circulation;
         private System.Windows.Forms.Button button_genres;
         private System.Windows.Forms.Button button_authors;
+        private System.Windows.Forms.Label label13;
     }
 }

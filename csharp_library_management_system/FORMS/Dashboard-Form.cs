@@ -67,6 +67,20 @@ namespace csharp_library_management_system.FORMS
             Login_Form lgf = new Login_Form(this);
             lgf.Show();
 
+
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_genres_Click(object sender, EventArgs e)
+        {
+            //show the manage genres form
+            ManageGenresForm mgf = new ManageGenresForm ();
+            mgf.Show();
         }
     }
 }
