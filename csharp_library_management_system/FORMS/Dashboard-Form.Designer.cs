@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_users = new System.Windows.Forms.Button();
+            this.button_circulation = new System.Windows.Forms.Button();
+            this.button_genres = new System.Windows.Forms.Button();
+            this.button_authors = new System.Windows.Forms.Button();
+            this.button_books = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox_Logo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -54,12 +60,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button_close = new System.Windows.Forms.Button();
-            this.button_books = new System.Windows.Forms.Button();
-            this.button_authors = new System.Windows.Forms.Button();
-            this.button_genres = new System.Windows.Forms.Button();
-            this.button_circulation = new System.Windows.Forms.Button();
-            this.button_users = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
@@ -90,9 +90,93 @@
             this.panel1.Size = new System.Drawing.Size(209, 447);
             this.panel1.TabIndex = 0;
             // 
+            // button_users
+            // 
+            this.button_users.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_users.FlatAppearance.BorderSize = 0;
+            this.button_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_users.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_users.ForeColor = System.Drawing.Color.White;
+            this.button_users.Location = new System.Drawing.Point(9, 352);
+            this.button_users.Name = "button_users";
+            this.button_users.Size = new System.Drawing.Size(191, 49);
+            this.button_users.TabIndex = 7;
+            this.button_users.Text = " Users";
+            this.button_users.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_users.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_users.UseVisualStyleBackColor = true;
+            // 
+            // button_circulation
+            // 
+            this.button_circulation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_circulation.FlatAppearance.BorderSize = 0;
+            this.button_circulation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_circulation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_circulation.ForeColor = System.Drawing.Color.White;
+            this.button_circulation.Location = new System.Drawing.Point(9, 301);
+            this.button_circulation.Name = "button_circulation";
+            this.button_circulation.Size = new System.Drawing.Size(191, 49);
+            this.button_circulation.TabIndex = 6;
+            this.button_circulation.Text = " Circulation";
+            this.button_circulation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_circulation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_circulation.UseVisualStyleBackColor = true;
+            // 
+            // button_genres
+            // 
+            this.button_genres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_genres.FlatAppearance.BorderSize = 0;
+            this.button_genres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_genres.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_genres.ForeColor = System.Drawing.Color.White;
+            this.button_genres.Location = new System.Drawing.Point(9, 250);
+            this.button_genres.Name = "button_genres";
+            this.button_genres.Size = new System.Drawing.Size(191, 49);
+            this.button_genres.TabIndex = 5;
+            this.button_genres.Text = " Genres";
+            this.button_genres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_genres.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_genres.UseVisualStyleBackColor = true;
+            this.button_genres.Click += new System.EventHandler(this.button_genres_Click);
+            // 
+            // button_authors
+            // 
+            this.button_authors.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_authors.FlatAppearance.BorderSize = 0;
+            this.button_authors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_authors.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_authors.ForeColor = System.Drawing.Color.White;
+            this.button_authors.Location = new System.Drawing.Point(9, 199);
+            this.button_authors.Name = "button_authors";
+            this.button_authors.Size = new System.Drawing.Size(191, 49);
+            this.button_authors.TabIndex = 4;
+            this.button_authors.Text = " Authors";
+            this.button_authors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_authors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_authors.UseVisualStyleBackColor = true;
+            this.button_authors.Click += new System.EventHandler(this.button_authors_Click);
+            // 
+            // button_books
+            // 
+            this.button_books.BackColor = System.Drawing.Color.ForestGreen;
+            this.button_books.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_books.FlatAppearance.BorderSize = 0;
+            this.button_books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_books.ForeColor = System.Drawing.Color.White;
+            this.button_books.Location = new System.Drawing.Point(9, 148);
+            this.button_books.Name = "button_books";
+            this.button_books.Size = new System.Drawing.Size(191, 49);
+            this.button_books.TabIndex = 3;
+            this.button_books.Text = " Books";
+            this.button_books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_books.UseVisualStyleBackColor = false;
+            this.button_books.Click += new System.EventHandler(this.button_books_Click);
+            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.panel2.BackColor = System.Drawing.Color.IndianRed;
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.pictureBox_Logo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -101,6 +185,18 @@
             this.panel2.Size = new System.Drawing.Size(209, 127);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.label13.Location = new System.Drawing.Point(73, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(133, 57);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "LMS";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox_Logo
             // 
@@ -113,7 +209,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.YellowGreen;
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
@@ -121,7 +217,7 @@
             this.panel3.Controls.Add(this.button_close);
             this.panel3.Location = new System.Drawing.Point(206, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(904, 450);
+            this.panel3.Size = new System.Drawing.Size(884, 450);
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -248,14 +344,14 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(789, 43);
+            this.label7.Size = new System.Drawing.Size(789, 52);
             this.label7.TabIndex = 1;
             this.label7.Text = "Latest Books";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel6.BackColor = System.Drawing.Color.DarkViolet;
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(616, 42);
@@ -265,7 +361,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.DarkOrange;
+            this.label6.BackColor = System.Drawing.Color.DarkViolet;
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -278,7 +374,7 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.SandyBrown;
+            this.label5.BackColor = System.Drawing.Color.MediumOrchid;
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -291,7 +387,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(322, 42);
@@ -301,6 +397,7 @@
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.RoyalBlue;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -313,7 +410,7 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.label3.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -326,7 +423,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Red;
+            this.panel4.BackColor = System.Drawing.Color.OrangeRed;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(27, 41);
@@ -336,6 +433,7 @@
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.OrangeRed;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -348,7 +446,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.OrangeRed;
+            this.label1.BackColor = System.Drawing.Color.DarkOrange;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -370,102 +468,6 @@
             this.button_close.TabIndex = 0;
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button_books
-            // 
-            this.button_books.BackColor = System.Drawing.Color.LightGreen;
-            this.button_books.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_books.FlatAppearance.BorderSize = 0;
-            this.button_books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_books.ForeColor = System.Drawing.Color.White;
-            this.button_books.Location = new System.Drawing.Point(9, 148);
-            this.button_books.Name = "button_books";
-            this.button_books.Size = new System.Drawing.Size(191, 49);
-            this.button_books.TabIndex = 3;
-            this.button_books.Text = " Books";
-            this.button_books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_books.UseVisualStyleBackColor = false;
-            this.button_books.Click += new System.EventHandler(this.button_books_Click);
-            // 
-            // button_authors
-            // 
-            this.button_authors.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_authors.FlatAppearance.BorderSize = 0;
-            this.button_authors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_authors.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_authors.ForeColor = System.Drawing.Color.White;
-            this.button_authors.Location = new System.Drawing.Point(9, 199);
-            this.button_authors.Name = "button_authors";
-            this.button_authors.Size = new System.Drawing.Size(191, 49);
-            this.button_authors.TabIndex = 4;
-            this.button_authors.Text = " Authors";
-            this.button_authors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_authors.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_authors.UseVisualStyleBackColor = true;
-            this.button_authors.Click += new System.EventHandler(this.button_authors_Click);
-            // 
-            // button_genres
-            // 
-            this.button_genres.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_genres.FlatAppearance.BorderSize = 0;
-            this.button_genres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_genres.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_genres.ForeColor = System.Drawing.Color.White;
-            this.button_genres.Location = new System.Drawing.Point(9, 250);
-            this.button_genres.Name = "button_genres";
-            this.button_genres.Size = new System.Drawing.Size(191, 49);
-            this.button_genres.TabIndex = 5;
-            this.button_genres.Text = " Genres";
-            this.button_genres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_genres.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_genres.UseVisualStyleBackColor = true;
-            this.button_genres.Click += new System.EventHandler(this.button_genres_Click);
-            // 
-            // button_circulation
-            // 
-            this.button_circulation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_circulation.FlatAppearance.BorderSize = 0;
-            this.button_circulation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_circulation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_circulation.ForeColor = System.Drawing.Color.White;
-            this.button_circulation.Location = new System.Drawing.Point(9, 301);
-            this.button_circulation.Name = "button_circulation";
-            this.button_circulation.Size = new System.Drawing.Size(191, 49);
-            this.button_circulation.TabIndex = 6;
-            this.button_circulation.Text = " Circulation";
-            this.button_circulation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_circulation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_circulation.UseVisualStyleBackColor = true;
-            // 
-            // button_users
-            // 
-            this.button_users.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_users.FlatAppearance.BorderSize = 0;
-            this.button_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_users.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_users.ForeColor = System.Drawing.Color.White;
-            this.button_users.Location = new System.Drawing.Point(9, 352);
-            this.button_users.Name = "button_users";
-            this.button_users.Size = new System.Drawing.Size(191, 49);
-            this.button_users.TabIndex = 7;
-            this.button_users.Text = " Users";
-            this.button_users.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_users.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_users.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Gold;
-            this.label13.Location = new System.Drawing.Point(73, 33);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 57);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "LMS";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // Dashboard_Form
             // 

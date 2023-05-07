@@ -12,11 +12,14 @@ namespace csharp_library_management_system.FORMS
 {
     public partial class AuthorsListForm : Form
     {
-        public AuthorsListForm()
+        private ManageBooksForm mngBooks = null;
+
+        public AuthorsListForm(ManageBooksForm sourceForm)
         {
+            mngBooks = sourceForm as ManageBooksForm;
             InitializeComponent();
         }
-
+     
         private void label_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,18 +28,29 @@ namespace csharp_library_management_system.FORMS
         private void AuthorsListForm_Load(object sender, EventArgs e)
         {
             CLASSES.AUTHOR author = new CLASSES.AUTHOR();
-            listBox_authors.DataSource = author.AuthorsList();
+            listBox_authors.DataSource = author.AuthorsList(true);
             listBox_authors.DisplayMember = "fullname";
             listBox_authors.ValueMember = "id";
         }
 
         private void button_select_close_Click(object sender, EventArgs e)
         {
-            DataRowView drv = (DataRowView)listBox_authors.SelectedItem;
-            string fullname = drv["fullname"].ToString();
-            string id = drv["id"].ToString();
+            try
+            {
+                DataRowView drv = (DataRowView)listBox_authors.SelectedItem;
+                string fullname = drv["fullname"].ToString();
+                string id = drv["id"].ToString();
 
-            MessageBox.Show("ID = " + id + ", Full name = " + fullname);
+                //MessageBox.Show("ID = " + id + ", Full name = " + fullname);
+                mngBooks.textBox_author.Text = fullname;
+                mngBooks.label_authorid.Text = id;
+
+                //if the listbox is empty
+            } catch (Exception ex)
+            {
+              MessageBox.Show("No Author Selected" + ex.Message);
+            }
+
 
             this.Close();
 

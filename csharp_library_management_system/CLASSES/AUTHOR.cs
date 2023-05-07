@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Xml.Linq;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace csharp_library_management_system.CLASSES
 {
@@ -87,10 +89,17 @@ namespace csharp_library_management_system.CLASSES
             }
         }
 
-        public DataTable AuthorsList()
+        public DataTable AuthorsList(Boolean display_fullname)
         {
+            string query = "SELECT * FROM `authors`";
+
+            if(display_fullname)
+            {
+                query = "SELECT `id`, Concat(`first_name`,' ',`last_name`) as fullname,`education`, `bio` FROM `authors`";
+            }
+
             DataTable table = new DataTable();
-            table = db.getData("SELECT `id`, Concat(`first_name`,' ',`last_name`) as fullname,`education`, `bio` FROM `authors`", null);
+            table = db.getData(query, null);
             return table;
         }
 

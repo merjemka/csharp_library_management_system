@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace csharp_library_management_system.CLASSES
 
         //create a function to add a new book
         //SELECT `id`, `isbn`, `title`, `author_id`, `genre_id`, `quantity`, `price`, `publisher`, `date_received`, `description`, `cover` FROM `books`
-        public Boolean addBook(int id, string isbn, string title, int author_id, int genre_id, int quantity, double price, string publisher, DateTime date_received, string description, byte cover )
+        public Boolean addBook(int id, string isbn, string title, int author_id, int genre_id, int quantity, double price, string publisher, DateTime date_received, string description, byte[] cover )
         {
             string query = "INSERT INTO `books`(`id`, `isbn`, `title`, `author_id`, `genre_id`, `quantity`, `price`, `publisher`, `date_received`, `description`, `cover`) VALUES (@id, @isbn, @title, @author, @genre, @qty, @price, @publisher, @rec, @descr, @img)";
 
@@ -52,7 +53,8 @@ namespace csharp_library_management_system.CLASSES
             {
                 return false;
             }
-            return true;
+
+            //return true;
         }
         public Boolean editBook()
         {
@@ -65,5 +67,33 @@ namespace csharp_library_management_system.CLASSES
             return true;
         }
 
+        public DataTable BooksList()
+        {
+            string query = "SELECT * FROM `books`";
+
+            DataTable table = new DataTable();
+            table = db.getData(query, null);
+            return table;
+        }
+
+        public Boolean doesIsbnExist(string isbn)
+        {
+            string query = " SELECT * FROM `books` WHERE `isbn`= @isbn";
+
+            MySqlParameter[] parameters = new MySqlParameter[1];
+            parameters[0] = new MySqlParameter("@isbn", MySqlDbType.VarChar);
+            parameters[0].Value = isbn;
+
+            DataTable table = new DataTable();
+            table = db.getData(query, parameters);
+            if (table.Rows.Count > 0)
+            {
+                return true;
+            }
+            else {
+                return false;
+
+            }
+        }
     }
 }

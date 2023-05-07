@@ -32,7 +32,7 @@ namespace csharp_library_management_system.FORMS
             button_delete.Image = Image.FromFile("../../IMAGES/trash.png");
 
             // populate datagridview with authors
-            dataGridView_authors.DataSource = author.AuthorsList();
+            dataGridView_authors.DataSource = author.AuthorsList(false);
 
             //customize datagridview header
             dataGridView_authors.ColumnHeadersDefaultCellStyle.ForeColor = Color.Blue;
@@ -61,7 +61,7 @@ namespace csharp_library_management_system.FORMS
 
                     MessageBox.Show("New Author Added Successfully", "New Author", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    dataGridView_authors.DataSource = author.AuthorsList();
+                    dataGridView_authors.DataSource = author.AuthorsList(false);
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace csharp_library_management_system.FORMS
 
                         MessageBox.Show("The Author Data Has Been Updated Successfully", "Edit Author", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        dataGridView_authors.DataSource = author.AuthorsList();
+                        dataGridView_authors.DataSource = author.AuthorsList(false);
                     }
                     else
                     {
@@ -133,7 +133,7 @@ namespace csharp_library_management_system.FORMS
                         textBox_edu.Text = "";
                         richTextBox_bio.Text = "";
 
-                        dataGridView_authors.DataSource = author.AuthorsList();
+                        dataGridView_authors.DataSource = author.AuthorsList(false);
                     }
                     else
                     {

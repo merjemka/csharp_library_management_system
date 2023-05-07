@@ -140,6 +140,7 @@
     <Content Include="IMAGES\book %283%29.png" />
     <Content Include="IMAGES\book.png" />
     <Content Include="IMAGES\close.png" />
+    <Content Include="IMAGES\default.png" />
     <Content Include="IMAGES\genres.png" />
     <Content Include="IMAGES\literature.png" />
     <Content Include="IMAGES\lock.png" />
