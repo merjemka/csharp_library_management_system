@@ -1,0 +1,80 @@
+﻿using csharp_library_management_system.CLASSES;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace csharp_library_management_system.FORMS
+{
+    public partial class ManageAuthorsForm : Form
+    {
+
+        CLASSES.AUTHOR author = new CLASSES.AUTHOR();
+        public ManageAuthorsForm()
+        {
+            InitializeComponent();
+        }
+
+        private void label_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ManageAuthorsForm_Load(object sender, EventArgs e)
+        {
+            button_add.Image = Image.FromFile("../../IMAGES/plus.png");
+            button_edit.Image = Image.FromFile("../../IMAGES/updates.png");
+            button_delete.Image = Image.FromFile("../../IMAGES/trash.png");
+
+            // populate datagridview with authors
+            dataGridView_authors.DataSource = author.AuthorsList();
+
+            //customize datagridview header
+            dataGridView_authors.ColumnHeadersDefaultCellStyle.ForeColor = Color.Blue;
+            dataGridView_authors.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Arial", 12);
+            dataGridView_authors.EnableHeadersVisualStyles = false;
+            dataGridView_authors.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView_authors.DefaultCellStyle.Font = new Font("Arial", 10);
+        }
+
+
+        private void button_add_Click(object sender, EventArgs e)
+        {
+            string first_name = textBox_fname.Text;
+            string last_name = textBox_lname.Text;
+            string education = textBox_edu.Text;
+            string bio = richTextBox_bio.Text;
+            
+            if(first_name.Trim().Equals("") || last_name.Trim().Equals(""))
+            {
+                MessageBox.Show("You Need To Enter The Author First And Last Name", "Empty Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if(author.addAuthor(first_name,last_name,education,bio))
+                {
+
+                    MessageBox.Show("New Author Added Successfully", "New Author", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    //dataGridView_genres.DataSource = genre.GenresList();
+                }
+                else
+                {
+                    MessageBox.Show("Author Not Added", "Add-Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
+    
+}

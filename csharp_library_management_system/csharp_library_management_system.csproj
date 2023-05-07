@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLASSES\AUTHOR.cs" />
     <Compile Include="CLASSES\GENRE.cs" />
     <Compile Include="FORMS\Dashboard-Form.cs">
       <SubType>Form</SubType>
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="FORMS\Login-Form.Designer.cs">
       <DependentUpon>Login-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageAuthorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageAuthorsForm.Designer.cs">
+      <DependentUpon>ManageAuthorsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMS\ManageGenresForm.cs">
       <SubType>Form</SubType>
@@ -77,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\Login-Form.resx">
       <DependentUpon>Login-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageAuthorsForm.resx">
+      <DependentUpon>ManageAuthorsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\ManageGenresForm.resx">
       <DependentUpon>ManageGenresForm.cs</DependentUpon>
@@ -115,6 +125,7 @@
     <Content Include="IMAGES\plus.png" />
     <Content Include="IMAGES\tag.png" />
     <Content Include="IMAGES\trash.png" />
+    <Content Include="IMAGES\typewriter.png" />
     <Content Include="IMAGES\updates.png" />
     <Content Include="IMAGES\user.png" />
     <Content Include="IMAGES\users.png" />
