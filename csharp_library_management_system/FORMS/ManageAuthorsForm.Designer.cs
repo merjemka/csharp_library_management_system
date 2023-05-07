@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label_ID = new System.Windows.Forms.Label();
             this.dataGridView_authors = new System.Windows.Forms.DataGridView();
+            this.button_show_author_books = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_author)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -105,6 +106,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Controls.Add(this.button_show_author_books);
             this.panel2.Controls.Add(this.button_delete);
             this.panel2.Controls.Add(this.button_edit);
             this.panel2.Controls.Add(this.button_add);
@@ -118,26 +120,28 @@
             this.button_delete.BackColor = System.Drawing.Color.FloralWhite;
             this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_delete.Location = new System.Drawing.Point(18, 144);
+            this.button_delete.Location = new System.Drawing.Point(18, 150);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(126, 52);
             this.button_delete.TabIndex = 13;
             this.button_delete.Text = " Delete";
             this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // button_edit
             // 
             this.button_edit.BackColor = System.Drawing.Color.FloralWhite;
             this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_edit.Location = new System.Drawing.Point(18, 82);
+            this.button_edit.Location = new System.Drawing.Point(18, 87);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(126, 52);
             this.button_edit.TabIndex = 12;
             this.button_edit.Text = " Edit";
             this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_edit.UseVisualStyleBackColor = false;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
             // button_add
             // 
@@ -169,7 +173,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(460, 332);
             this.panel3.TabIndex = 11;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // richTextBox_bio
             // 
@@ -272,6 +275,21 @@
             this.dataGridView_authors.RowTemplate.Height = 24;
             this.dataGridView_authors.Size = new System.Drawing.Size(596, 322);
             this.dataGridView_authors.TabIndex = 12;
+            this.dataGridView_authors.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_authors_CellClick);
+            // 
+            // button_show_author_books
+            // 
+            this.button_show_author_books.BackColor = System.Drawing.Color.FloralWhite;
+            this.button_show_author_books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show_author_books.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_show_author_books.Location = new System.Drawing.Point(18, 213);
+            this.button_show_author_books.Name = "button_show_author_books";
+            this.button_show_author_books.Size = new System.Drawing.Size(126, 122);
+            this.button_show_author_books.TabIndex = 14;
+            this.button_show_author_books.Text = "Show Author\'s Books";
+            this.button_show_author_books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_show_author_books.UseVisualStyleBackColor = false;
+            this.button_show_author_books.Click += new System.EventHandler(this.button_show_author_books_Click);
             // 
             // ManageAuthorsForm
             // 
@@ -320,5 +338,6 @@
         private System.Windows.Forms.TextBox textBox_edu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView_authors;
+        private System.Windows.Forms.Button button_show_author_books;
     }
 }

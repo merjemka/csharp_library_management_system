@@ -57,7 +57,8 @@ namespace csharp_library_management_system.FORMS
 
         private void button_books_Click(object sender, EventArgs e)
         {
-
+               ManageBooksForm mbf= new ManageBooksForm();
+            mbf.Show();
         }
 
         private void Dashboard_Form_Shown(object sender, EventArgs e)

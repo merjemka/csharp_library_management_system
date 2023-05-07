@@ -17,11 +17,7 @@ namespace csharp_library_management_system.FORMS
         {
             InitializeComponent();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+                
         CLASSES.GENRE genre = new CLASSES.GENRE();
         private void ManageGenresForm_Load(object sender, EventArgs e)
         {
@@ -41,26 +37,14 @@ namespace csharp_library_management_system.FORMS
             dataGridView_genres.DefaultCellStyle.Font = new Font("Arial", 10);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void label_close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button_add_Click(object sender, EventArgs e)
         {
             string name = textBox_name.Text;
@@ -124,32 +108,30 @@ namespace csharp_library_management_system.FORMS
             try
             {
                 int id = Convert.ToInt32(textBox_ID.Text);
-            
+
+                if (MessageBox.Show("Do you really want to delete this genre?", "Confirmation Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
                     if (genre.removeGenre(id))
                     {
                         MessageBox.Show("Genre Deleted Successfully", "Delete Genre", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // clear fields 
+                        // clear fields 
 
-                    textBox_ID.Text = "";
-                    textBox_name.Text = "";
-                    dataGridView_genres.DataSource = genre.GenresList();
-                }
+                        textBox_ID.Text = "";
+                        textBox_name.Text = "";
+                        dataGridView_genres.DataSource = genre.GenresList();
+                    }
                     else
                     {
                         MessageBox.Show("Genre Not Deleted", "Delete-Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     }
-                
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Invalid ID");
             }
-        }
-
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dataGridView_genres_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -158,9 +140,5 @@ namespace csharp_library_management_system.FORMS
             textBox_name.Text = dataGridView_genres.CurrentRow.Cells[1].Value.ToString();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

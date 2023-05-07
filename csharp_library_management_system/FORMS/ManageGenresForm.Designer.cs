@@ -58,7 +58,7 @@
             this.label_header.TabIndex = 1;
             this.label_header.Text = "GENRES";
             this.label_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_header.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // panel1
             // 
@@ -68,7 +68,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 364);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+     
             // 
             // panel2
             // 
@@ -86,7 +86,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(804, 364);
             this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+           
             // 
             // button_delete
             // 
@@ -142,7 +142,7 @@
             this.dataGridView_genres.Size = new System.Drawing.Size(363, 303);
             this.dataGridView_genres.TabIndex = 9;
             this.dataGridView_genres.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_genres_CellClick);
-            this.dataGridView_genres.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+  
             // 
             // textBox_name
             // 
@@ -175,7 +175,7 @@
             this.label_ID.Size = new System.Drawing.Size(49, 32);
             this.label_ID.TabIndex = 5;
             this.label_ID.Text = "ID:";
-            this.label_ID.Click += new System.EventHandler(this.label1_Click_1);
+         
             // 
             // label_close
             // 
@@ -200,7 +200,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+        
             // 
             // ManageGenresForm
             // 

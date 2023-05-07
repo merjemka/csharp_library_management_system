@@ -12,6 +12,8 @@ namespace csharp_library_management_system.CLASSES
     internal class AUTHOR
     {
         THE_DATABASE.MYDB db = new THE_DATABASE.MYDB();
+
+        //adding author
         public Boolean addAuthor(string fname, string lname, string edu, string bio)
         {
             string query = "INSERT INTO `authors`(`first_name`, `last_name`, `education`, `bio`) VALUES (@fn, @ln, @edu, @bio)";
@@ -35,13 +37,60 @@ namespace csharp_library_management_system.CLASSES
             {
                 return false;
             }
+        }
 
+        //editing author
+
+        public Boolean editAuthor(int id, string fname, string lname, string edu, string bio)
+        {
+            string query = "UPDATE `authors` SET `first_name`=@fn,`last_name`=@ln,`education`=@edu,`bio`= @bio WHERE `id`=@id";
+
+            MySqlParameter[] parameters = new MySqlParameter[5];
+
+            parameters[0] = new MySqlParameter("@fn", MySqlDbType.VarChar);
+            parameters[0].Value = fname;
+            parameters[1] = new MySqlParameter("@ln", MySqlDbType.VarChar);
+            parameters[1].Value = lname;
+            parameters[2] = new MySqlParameter("@edu", MySqlDbType.VarChar);
+            parameters[2].Value = edu;
+            parameters[3] = new MySqlParameter("@bio", MySqlDbType.VarChar);
+            parameters[3].Value = bio;
+            parameters[4] = new MySqlParameter("@id", MySqlDbType.Int32);
+            parameters[4].Value = id;
+
+            if (db.setData(query, parameters) == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public Boolean removeAuthor(int id)
+        {
+            string query = "DELETE FROM `authors` WHERE `id`= @id";
+
+            MySqlParameter[] parameters = new MySqlParameter[1];
+            parameters[0] = new MySqlParameter("@id", MySqlDbType.Int32);
+            parameters[0].Value = id;
+
+            if (db.setData(query, parameters) == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public DataTable AuthorsList()
         {
             DataTable table = new DataTable();
-            table = db.getData("SELECT * FROM `authors`", null);
+            table = db.getData("SELECT `id`, Concat(`first_name`,' ',`last_name`) as fullname,`education`, `bio` FROM `authors`", null);
             return table;
         }
 
